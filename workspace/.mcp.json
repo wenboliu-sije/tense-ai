@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "monolis": {
+      "command": "npx",
+      "args": ["tsx", "../packages/monolis-mcp/src/index.ts"]
+    }
+  }
+}

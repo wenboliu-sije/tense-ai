@@ -1,0 +1,36 @@
+{
+  "openapi": "3.0.0",
+  "info": { "title": "fixture", "version": "1.0.0" },
+  "components": {
+    "schemas": {
+      "StatusEnum": { "type": "string", "enum": ["OPEN", "CLOSED"] }
+    }
+  },
+  "paths": {
+    "/salesOrder": {
+      "get": {
+        "summary": "List sales orders",
+        "parameters": [
+          { "name": "buyerId", "in": "query", "required": false, "schema": { "type": "number" }, "description": "Filter by buyer" },
+          { "name": "status", "in": "query", "required": true, "schema": { "$ref": "#/components/schemas/StatusEnum" }, "description": "Order status filter" }
+        ]
+      },
+      "post": { "summary": "Create sales order" }
+    },
+    "/salesOrder/{id}": {
+      "get": {
+        "summary": "Get one sales order",
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "number" } }
+        ]
+      },
+      "delete": { "summary": "Delete sales order" }
+    },
+    "/stylePlan": {
+      "get": { "summary": "List style plans" }
+    },
+    "/user": {
+      "get": { "summary": "List users" }
+    }
+  }
+}

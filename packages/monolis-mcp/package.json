@@ -1,0 +1,14 @@
+{
+  "name": "monolis-mcp",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "fetch-openapi": "tsx scripts/fetch-openapi.ts",
+    "emit-settings": "tsx scripts/emit-workspace-settings.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "dotenv": "^17.4.2"
+  }
+}
